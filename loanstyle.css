@@ -1,0 +1,45 @@
+/* Define font family and border collapse for the table */
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Styling for table cell (td) and table header (th) */
+  td, th {
+    
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Alternating row background color */
+  tr:nth-child(even) {
+    background-color: #EEEFF1;
+  }
+  
+  hr {
+    border: 1px solid #dddddd; /* Adjust border properties as needed */
+    margin: 20px 0; /* Adjust margin properties as needed */
+  }
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.new-loan-button,
+.loan-bal-button {
+    background-color: #00ba78;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.new-loan-button:hover,
+.loan-bal-button:hover {
+    background-color: #6E7074;
+}

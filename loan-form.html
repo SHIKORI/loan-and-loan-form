@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CDN's -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loan-form-style.css" />
+</head>
+  <body>
+    <nav class="navbar navbar-default no-margin">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header fixed-brand">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          id="menu-toggle">
+          <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Cooperative Name</a
+        >
+      </div>
+      <!-- navbar-header-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <button
+              class="navbar-toggle collapse in"
+              data-toggle="collapse"
+              id="menu-toggle-2"
+            >
+              <span
+                class="glyphicon glyphicon-th-large"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- bs-example-navbar-collapse-1 -->
+    </nav>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+          <li>Menu</li>
+          <li class="active">
+            <a href="index.html">
+              <span class="fa-stack fa-lg pull-left">
+                <i class="bi bi-border-all"></i>
+              </span>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fa-stack fa-lg pull-left">
+                <i class="bi bi-inbox"></i>
+              </span>
+              <span class="nav-text">Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="loan.html">
+              <span class="fa-stack fa-lg pull-left"
+                ><i class="bi bi-wallet2"></i></span>
+                <span class="nav-text">Loan</span> 
+              </a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="fa-stack fa-lg pull-left"
+                ><i class="bi bi-graph-up"></i></span
+              ><span class="nav-text">Payments</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="fa-stack fa-lg pull-left"
+                ><i class="bi bi-receipt-cutoff"></i></span
+              ><span class="nav-text">Transactions</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="fa-stack fa-lg pull-left"
+                ><i class="bi bi-pie-chart"></i></span
+              ><span class="nav-text">Reports</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid xyz">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 style="color: #00BA78;">
+                Loan > New Loan
+              </h1>
+              <form action="form.html" method="POST">
+                <h1 class="loan-title">Loan Application</h1>
+                <fieldset>
+                  <legend>Basic Information</legend>
+                  <label for="first name">First Name</label>
+                  <input type="text" name="first-name" />
+                  <label for="middle initial">Middle Initial</label>
+                  <input type="text" name="middle initial" />
+                  <label for="last name">Last Name</label>
+                  <input type="text" name="last-name" />
+                  <br/>
+                  <label for="email address">Email</label>
+                  <input type="text" name="email" placeholder="janedoe31@yahoo.com" />
+                  <label for="telephone">Contact Number</label>
+                  <input type="text" name="telephone" />
+                  <br/>
+                  <label for="home address">Home Address</label>
+                  <input type="text" name="address" />
+                </fieldset>
+                <fieldset>
+                  <legend>Work Information</legend>
+                  <label for="occupation">Current Occupation</label>
+                  <input type="text" name="occupation" />
+                  <label for="company name">Employer Name</label>
+                  <input type="text" name="company name" />
+                  <label for="company location">Employer Address</label>
+                  <input type="text" name="company location" />
+                </fieldset>
+                <fieldset>
+                  <legend>Loan Type & Amount</legend>
+                  <input name="loan" list="type-of-loan"/>
+                    <datalist id="type-of-loan">
+                      <option value="Commercial">
+                      <option value="Real Estate">
+                      <option value="Personal">
+                      <option value="Mortgage">
+                    </datalist>
+                   <br/>
+                  <label for="loan amount">Loan Amount</label>
+                  <input type="text" name="loan amount" />
+                </fieldset>
+                <fieldset>
+                  <legend>Length of Loan</legend>
+                  <input type="radio" name="length-of-time" value="5">5
+                  <input type="radio" name="length-of-time" value="15">15
+                  <input type="radio" name="length-of-time" value="30">30
+                </fieldset>
+                <fieldset>
+                  <legend>Marital Status</legend>
+                  <input type="checkbox" name="status" value="single">Single
+                  <input type="checkbox" name="status" value="married">Married
+                  <input type="checkbox" name="status" value="divorced">Divorced
+                </fieldset>
+                <fieldset>
+                  <legend>Special Considerations</legend>
+                  <label for="down payment">Down Payment</label>
+                  <input type="text" name="down payment" />
+                  <br>
+                  <input type="checkbox" id="out-of-state-checkbox" name="out-of-state" value="out-of-state">Out of State Resident
+                  <input type="checkbox" id="cosigner-checkbox" name="cosigner" value="cosigner">Cosigner
+                  <br>
+                  <br>
+                  <label for="name">Name of Cosigner (optional)</label>
+                  <input type="text" id="name-of-cosigner" name="name-of-cosigner" disabled />
+                  <label for="occupation">Cosigner Occupation</label>
+                  <input type="text" id="cosigner-occupation" name="occupation" disabled />
+                </fieldset>
+                  <legend>Comments</legend>
+                  <textarea name='comment' name='comment'></textarea>
+              
+                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+                </fieldset>
+              
+              <button type="submit">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="form_interactions.js"></script>
+</body>
+</html>
